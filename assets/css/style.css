@@ -1,0 +1,264 @@
+:root {
+    --primario: #1d1e33;
+    --secundario: #ffffff;
+    --terciario: #880101;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1REM = 10px */
+    scroll-behavior: smooth;
+}
+
+/*utilidades*/
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Encabezado */
+
+.myheader {
+    background-color: var(--primario);
+    color: var(--secundario);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    /* Para encabezado fijo */
+    position: fixed;
+    width: 100%;
+    
+}
+
+.mylogo {
+    width: 110px;
+    margin: 2rem 0;
+    /*border-radius: 15px 50px 30px 5px;*/
+    border-radius:18%;
+    /* border: solid white 1px; */
+}
+
+.navigation {
+    display: flex;
+    /* border: solid white 1px; */
+}
+
+.link {
+    color: var(--secundario);
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 3rem;
+}
+
+.link:hover {
+    color: var(--terciario);
+    background-color: var(--secundario);
+}
+
+/* Contenido principal */
+
+.content-main {
+    /* background-color: red; */
+    /* border: solid white 1px; */
+    background-color: var(--primario);
+    /* Para encabezado fijo */
+    padding-top: 130px;
+}
+
+.container-main {
+    /* border: solid blue 1px; */
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 90%;
+    height: 50px;
+    background-image: url('/assets/images/background1.png');
+    vertical-align: text-bottom;
+}
+
+.banner {
+    width: 100%;
+    height: 150px;
+    /* border: solid white 1px; */
+}
+
+.text-title {
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 2rem 0;
+    color: var(--secundario);
+}
+
+.section-service {
+    /* fixed header */
+    padding-top: 130px;
+}
+
+.section-service h2{
+    font-size: 4.6rem;
+    text-align: center;
+}
+
+.service {
+    background-color: var(--primario);
+}
+
+.list-service {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.text-service {
+    text-align: center;
+    color: var(--secundario);
+    padding: 2rem;
+}
+
+.text-service h3 {
+    margin: 0;
+}
+.text-service p {
+    margin: 0 0 .5rem 0;
+    font-size: 2rem;
+}
+.text-service .price {
+    font-size: 2.8rem;
+    font-weight: 900;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.btn {
+    background-color: rgb(197, 145, 0);
+    display: block;
+    color: var(--secundario);
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color .3s ease-out ;
+    text-align: center;
+    border: none;
+    font-size: 2rem;
+}
+.btn:hover {
+    background-color: rgb(158, 116, 0);
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 5rem;
+}
+h2 {
+    font-size: 4rem;
+}
+h3 {
+    font-size: 3rem;
+}
+
+/* contacto */
+.about {
+    margin-top: 5rem;
+    background-image: linear-gradient( to right, transparent 50%, #880101 50%, #880101 100% ), url(../assets/images/contacto.jpg);
+    background-position: left center;
+    padding: 10rem 0;
+    background-repeat: no-repeat;
+    background-size: 100%, 120rem;
+}
+.about-grid {
+    display: flex;
+    justify-content: flex-end;
+}
+.text-about {
+    flex-basis: 50%;
+    padding-left: 10rem;
+    color: var(--secundario);
+    font-size: 2.5rem;
+}
+
+.form-contact {
+    margin-top: 5rem;
+}
+
+.form-contact input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid #000;
+}
+
+.form-contact button {
+    background-color: rgb(197, 145, 0);
+    display: block;
+    color: var(--secundario);
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color .3s ease-out ;
+    text-align: center;
+    border: none;
+    font-size: 2rem;
+    width: 100%;
+}
+
+.form-contact button:hover {
+    background-color: rgb(158, 116, 0);
+    cursor: pointer;
+}
+
+
+.site-footer {
+    background-color: var(--primario);
+    padding: 5rem;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--secundario);
+    font-weight: bold;
+}
+
+.circle{
+    width:30px;
+    height:30px;
+    background:cyan;
+    border-radius:50%;
+    position:absolute;
+    top:0; bottom:0; left:0;right:0;
+    overflow:hidden;
+    margin:auto;
+    animation: circle 6s linear infinite;
+  }
+  
+  @keyframes circle{
+    0%{
+      transform:rotate(0deg)
+                translate(-165px)
+                rotate(0deg);
+    
+    }
+    100%{
+      transform:rotate(360deg)
+                translate(-165px)
+                rotate(-360deg);
+    }
+}
