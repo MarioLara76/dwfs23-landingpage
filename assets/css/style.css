@@ -133,6 +133,33 @@
     font-weight:lighter;
 }
 
+.clients { 
+    padding: 15rem 0;
+    margin-top: 10rem;
+    background-color: var(--primario);
+    color: var(--primario);
+}
+
+.clients-container {
+    display: flex;
+}
+
+.clients-gallery {
+    max-width: 100%;
+    display: flex;
+    width: 20%;
+    margin: 0 2px;
+    /*border-radius: 15px 50px 30px 5px;*/
+    border-radius:18%;
+    /*border-top-left-radius: 50px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 30px;*/
+    border: solid var(--primario) 2px; 
+    position: flex;
+    background-color: var(--secundario);
+}
+
 html {
     box-sizing: border-box;
     font-size: 62.5%; /* 1REM = 10px */
@@ -228,18 +255,20 @@ img {
 }
 
 .text-welcome {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     text-align: justify;
-    margin: 1rem 0;
+    margin: 0.75rem 0;
     color: var(--secundario);
 }
 
 .section-service {
     /* fixed header */
-    padding-top: 10px;
+    margin-top: 1rem;
+    padding-top: 20px;
     background-color: var(--linkhover);
     color: var(--primario);
+    padding: 15rem;
 }
 
 .section-service h2{
@@ -314,10 +343,10 @@ h3 {
 
 /* contacto */
 .about {
-    margin-top: 5rem;
-    background-image: linear-gradient( to right, transparent 50%, #880101 50%, #880101 100% ), url('/assets/images/logo.png');
+    margin-top: 1rem;
+    background-image: linear-gradient( to right, transparent 50%, #010188eb 50%, #010188eb 100% ), url('/assets/images/logo.png');
     background-position: left center;
-    padding: 10rem 0;
+    padding: 5rem 0;
     background-repeat: no-repeat;
     background-size: 100%, 120rem;
 }
@@ -328,14 +357,11 @@ h3 {
 }
 
 .about-text {
+    padding: 10rem 0;
     flex-basis: 50%;
     padding-left: 10rem;
     color: var(--secundario);
     font-size: 2.5rem;
-}
-
-.form-contact {
-    margin-top: 5rem;
 }
 
 .form-contact input {
@@ -346,8 +372,23 @@ h3 {
     border: 1px solid var(--primario);
 }
 
+/*span {
+    font-size: 2rem;
+    width:100%;
+    color: var(--secundario);
+    display: flex;
+}*/
+
+.form-contact textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--primario);
+}
+
 .form-contact button {
-    background-color: rgb(197, 145, 0);
+    background-color: var(--linkhover);
     display: block;
     color: var(--secundario);
     text-transform: uppercase;
@@ -361,41 +402,67 @@ h3 {
 }
 
 .form-contact button:hover {
-    background-color: rgb(158, 116, 0);
+    background-color: var(--terciario);
     cursor: pointer;
 }
 
-.label-container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.label-check {
-  position: absolute;
-  top: 0;
-  left: 0;
-  cursor: pointer;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
+.form-contact {
+    margin-top: 5rem;
 }
 
-.label-check:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
+.form-contact-inline {
+    margin-top: 5rem;
+    display: inline-flex;
+}
+
+.form-contact-inline input {
+    width: 150%;
+    padding: 1rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    border: 3px solid var(--primario);
+}
+
+.form-contact-inline button {
+    background-color: var(--linkhover);
+    display: block;
+    color: var(--secundario);
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color .3s ease-out ;
+    text-align: center;
+    border: 3px solid;
+    font-size: 2rem;
+    width: 100%;
+    height: 100%;
+}
+
+.form-contact-inline button:hover {
+    background-color: var(--terciario);
+    cursor: pointer;
+}
+
+.form-contact-inline-text {
+    color: var(--secundario);
+    font-size: 2rem;
+    width: 100%;
+}
 
 .site-footer {
+    margin-top: 1rem;
     background-color: var(--primario);
     background-image: url('/assets/images/background4.png');
-    padding: 5rem;
+    padding: 15rem;
+}
+
+.site-footer-text{
+    color: var(--primario);
+    background-color: goldenrod;
+    padding: 2rem 0;
+    flex-basis: 50%;
+    padding-left: 10rem;
+    font-size: 2.5rem;
 }
 
 .copyright {
@@ -415,9 +482,9 @@ h3 {
     overflow:hidden;
     margin:auto;
     animation: circle 6s linear infinite;
-  }
+}
   
-  @keyframes circle{
+@keyframes circle{
     0%{
       transform:rotate(0deg)
                 translate(-165px)
@@ -430,3 +497,66 @@ h3 {
                 rotate(-360deg);
     }
 }
+
+/* The container */
+.label-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .label-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .label-check {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  .label-container:hover input ~ .label-check {
+    background-color: var(--primario);
+  }
+  
+  .label-container input:checked ~ .label-check {
+    background-color: #2196F3;
+  }
+  
+  .label-check:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .label-container input:checked ~ .label-check:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .label-container .label-check:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }

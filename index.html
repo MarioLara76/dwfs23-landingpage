@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Omniverse Services, SAS</title>
         <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/css/responsive.css">
         <link rel="icon" href="./assets/images/favicon/favicon.ico" sizes="32x32">
     </head>
     <body>
@@ -14,9 +15,9 @@
             <img class="mylogo" src="./assets/images/logo_text.png" alt="Omniverse Services, LLC">
             <nav class="navigation">
                 <a class="link" href="#">Principal</a>
-                <a class="link" href="#menu">Servicios</a>
-                <a class="link" href="#contacto">Contacto</a>
-                <a class="link" href="#">Ayuda</a>
+                <a class="link" href="#services">Servicios</a>
+                <a class="link" href="#clientes">Nuestros Clientes</a>
+                <a class="link" href="#contacting">Contacto</a>
             </nav>
         </header>
         <section class="content-main">
@@ -30,7 +31,7 @@
                 <div class="container">
                     <!--<h1 class="text-welcome">Bienvenido</h1>-->
                     <p class="text-welcome">
-                        Hola, somos un equipo de profesionales de las tecnologías de la información y la comunicación con experiencia en proporcionar servicios en las áreas de cloud computing, telefonía, sitios y aplicaciones web y/o móviles en las distintas plataformas existentes.
+                        Hola, somos un equipo de profesionales de las tecnologías de la información y la comunicación con experiencia en proporcionar servicios en las áreas de cloud computing, telefonía, sitios y aplicaciones web, también contamos con experiencia en el desarrollo de aplicaciones móviles en las distintas plataformas existentes.
                     </p>
                     <p class="text-welcome">
                         Las tecnologías y proveedores que usamos de forma constante son:
@@ -41,11 +42,16 @@
                         <img class="gallery" src="./assets/images/providers/lamp.jpeg" alt="Omniverse Services, LLC">
                         <img class="gallery" src="./assets/images/providers/flutter.png" alt="Omniverse Services, LLC">
                     </div>
+                    <form class="form-contact-inline">
+                        <p class="form-contact-inline-text">Déjanos tu correo y te contactamos</p>
+                        <input type="email" placeholder="Tu correo electronico" required>
+                        <button type="submit">Suscribirme</button>
+                    </form>
                     <br>
                     <hr>
                 </div>
             </div>
-            <div class="section-service">
+            <div id="services" class="section-service">
                 <p class="text-listjumbotron">Principales Servicios</p>
                 <div class="jumbotron-container">
                     <div class="jumbotron-gallery">
@@ -68,28 +74,43 @@
                 <hr>
             </div>
         </main>
-        <section id="contactar" class="about">
+        <section id="clientes" class="clients">
+            <div class="container">
+                <p class="text-listjumbotron">
+                    Nuestros clientes:
+                </p>
+                <div class="clients-container">
+                    <img class="clients-gallery" src="./assets/images/clients/lilogo.png" alt="Omniverse Services, LLC">
+                    <img class="clients-gallery" src="./assets/images/clients/algovi.png" alt="Omniverse Services, LLC">
+                    <img class="clients-gallery" src="./assets/images/clients/log_wise.jpeg" alt="Omniverse Services, LLC">
+                    <img class="clients-gallery" src="./assets/images/clients/onzone.png" alt="Omniverse Services, LLC">
+                    <img class="clients-gallery" src="./assets/images/clients/redzone.jpeg" alt="Omniverse Services, LLC">
+                </div>
+            </div>
+        </section>
+        <section id="contacting" class="about">
             <div class="container about-grid">
               <div class="about-text">
                 <h2>Con gusto te atendemos</h2>
-                <p>Déjanos tu correo electrónico y envíanos tus dudas</p>
+                <p>Déjanos tu correo electrónico y envíanos tus dudas y/o comentarios</p>
                 <form class="form-contact">
-                  <input type="email" placeholder="Tu correo electronico">
+                  <input type="email" placeholder="Tu correo electronico" required>
+                  <textarea rows="3" cols="50" placeholder="Ingresa tus comentarios"></textarea>
                   <p>Si gustas, podemos llamarte.</p>
                   <input type="tel" placeholder="Número telefónico con código de país">
                   <label class="label-container">
                         <input type="checkbox"> Este número tiene WhatsApp
                         <span class="label-check"></span>
-                  </label>                  
+                  </label>
                   <hr>
                   <br>
                   <button type="submit">Enviar mis dudas</button>
                 </form>
               </div>
             </div>
-          </section>
+        </section>        
         <footer class="site-footer">
-            <h1 class="text-listjumbotron">Este es el footer</h1>
+            <h1 class="site-footer-text">Este es el footer</h1>
         </footer>
     </body>
 </html>
